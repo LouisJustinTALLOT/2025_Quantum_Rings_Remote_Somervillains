@@ -9,7 +9,7 @@ shots = 1024
 def iqft_cct(qc, b, n):
     for i in range (n):
         for j in range (1, i+1):
-            qc.cu1(  -math.pi / 2** ( i -j + 1 ), b[j - 1], b[i])
+            qc.cu1(-math.pi/2**(i-j+1), b[j-1], b[i])
         qc.h(b[i])
     qc.barrier()
     return
@@ -24,13 +24,13 @@ def shors_algorithm(N):
         return math.gcd(a, N)
     
     n = int(np.ceil(np.log2(N)))
-    qr = QuantumCircuit(2 * n, 2 * n)
+    qr = QuantumCircuit(2*n, 2*n)
 
     for qubit in range(n):
         qr.h(qubit)
 
     for qubit in range(n):
-        qr.cu1(2 * np.pi * a ** (2 ** qubit) / N, qubit, n)
+        qr.cu1(2*np.pi*a**(2**qubit)/N, qubit, n)
 
     iqft_cct(qr, range(n), n)
 
@@ -47,12 +47,12 @@ def shors_algorithm(N):
     measured_value = int(list(counts.keys())[0], 2)
 
     r = 1
-    while (a ** r) % N != 1:
+    while (a**r)%N != 1:
         r += 1
 
-    if r % 2 == 0 and (a ** (r // 2) + 1) % N != 0:
-        factor1 = math.gcd(a ** (r // 2) - 1, N)
-        factor2 = math.gcd(a ** (r // 2) + 1, N)
+    if r % 2 == 0 and (a**(r//2)+1)%N != 0:
+        factor1 = math.gcd(a**(r//2)-1, N)
+        factor2 = math.gcd(a**(r//2)+1, N)
         return factor1, factor2
 
     return None
