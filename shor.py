@@ -2,6 +2,7 @@ from QuantumRingsLib import QuantumCircuit, QuantumRegister, ClassicalRegister, 
 import numpy as np
 import math
 import QR_secrets
+import semiprimes
 
 shots = 1024
 
@@ -56,7 +57,7 @@ def shors_algorithm(N):
 
     return None
 
-# Example usage
-N = 57
-factors = shors_algorithm(N)
-print(f"Factors of {N} are: {factors}")
+if __name__=="__main__":
+    semiprimes=semiprimes.semiprimes
+    for N in list(semiprimes.values())[:2]:
+        print(f"Semiprime {N} is factored into {shors_algorithm(N)}")
