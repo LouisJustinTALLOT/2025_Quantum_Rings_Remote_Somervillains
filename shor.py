@@ -30,7 +30,7 @@ def shors_algorithm(N):
         qr.h(qubit)
 
     for qubit in range(n):
-        qr.cu1(2*np.pi*a**(2**qubit)/N, qubit, n)
+        qr.cu1(2*np.pi*a**(2**qubit)/N, qubit, n) # TODO : Find a way to remove that a**(2**qubit)?
 
     iqft_cct(qr, range(n), n)
 
