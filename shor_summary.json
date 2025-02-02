@@ -5,22 +5,30 @@
             2,
             3
         ],
-        "time_taken": 2.1457672119140625e-06
+        "time_taken": 0.0
     },
     {
         "semiprime": 15,
         "factors": [
-            3,
-            5
+            5,
+            3
         ],
-        "time_taken": 0.01889824867248535
+        "time_taken": 1.0973060131072998
     },
     {
         "semiprime": 21,
         "factors": [
-            3,
-            7
+            7,
+            3
         ],
-        "time_taken": 1.0452778339385986
+        "time_taken": 6.293720483779907
+    },
+    {
+        "semiprime": 143,
+        "factors": [
+            13,
+            11
+        ],
+        "time_taken": 0.001007080078125
     }
 ]
