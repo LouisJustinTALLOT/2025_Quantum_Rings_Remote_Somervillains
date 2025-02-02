@@ -1,0 +1,26 @@
+[
+    {
+        "semiprime": 6,
+        "factors": [
+            2,
+            3
+        ],
+        "time_taken": 2.1457672119140625e-06
+    },
+    {
+        "semiprime": 15,
+        "factors": [
+            3,
+            5
+        ],
+        "time_taken": 0.01889824867248535
+    },
+    {
+        "semiprime": 21,
+        "factors": [
+            3,
+            7
+        ],
+        "time_taken": 1.0452778339385986
+    }
+]
