@@ -3,7 +3,7 @@
 ## Team Members
 - Florent Pollet (flo1.raymond@gmail.com)
 - Pierre Sibut-Bourde (pierre.sibut.bourde@gmail.com)
-- Louis-Justin Tallot (lj.tallot@gmail.com)
+- Louis-Justin Tallot (louis-justin.tallot@etu.minesparis.psl.eu)
 
 ## Introduction
 This repository contains the code and the report for the Quantum Rings Remote Challenge of the iQuHACK 2025. The goal of this challenge is to factorize a number using Shor's algorithm. We implemented the algorithm using QuantumRingsLib, which was run on the pierre.sibut.bourde@gmail.com account.
