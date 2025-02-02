@@ -1,3 +1,7 @@
 QR_secrets.py
 testing/
 pycache/
+.ipynb_checkpoints
+__pycache__
+shor_circuit*
+shor_summary
